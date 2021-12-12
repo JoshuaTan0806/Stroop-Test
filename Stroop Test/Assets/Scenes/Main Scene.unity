@@ -173,6 +173,8 @@ MonoBehaviour:
   NumberOfColours: 0
   NumberOfGamesDropdown: {fileID: 1276016692}
   NumberOfGames: 0
+  AmountOfTimeDropdown: {fileID: 1915487186}
+  StartTime: 5
   GameCanvas: {fileID: 825580286}
   Game1Text: {fileID: 1465890368}
   GameCanvas2: {fileID: 1780323018}
@@ -183,7 +185,6 @@ MonoBehaviour:
   Game4Text2: {fileID: 1733187119}
   Game4Text3: {fileID: 3717699}
   Game4Text4: {fileID: 2099797657}
-  StartTime: 5
   Score: 0
   LoseCanvas: {fileID: 715347053}
   ScoreCanvas: {fileID: 1588785149}
@@ -23912,7 +23913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1901798898
 MonoBehaviour:
   m_ObjectHideFlags: 0
