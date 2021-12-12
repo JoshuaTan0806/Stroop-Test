@@ -169,12 +169,11 @@ MonoBehaviour:
   CurrentGameState: 0
   MainMenuCanvas: {fileID: 1065383632}
   OptionsCanvas: {fileID: 1901798900}
-  GameCanvas: {fileID: 825580286}
-  ScoreCanvas: {fileID: 1588785149}
-  LoseCanvas: {fileID: 715347053}
-  ColourManager: {fileID: 1614769657}
   NumberOfColoursDropdown: {fileID: 1753081631}
   NumberOfColours: 0
+  NumberOfGamesDropdown: {fileID: 1276016692}
+  NumberOfGames: 0
+  GameCanvas: {fileID: 825580286}
   Score: 0
   Buttons:
   - {fileID: 1878120043}
@@ -185,7 +184,12 @@ MonoBehaviour:
   - {fileID: 853562860}
   - {fileID: 503579743}
   - {fileID: 423550740}
-  ColourText: {fileID: 1465890366}
+  ScoreText: {fileID: 1708659025}
+  TimeText: {fileID: 1874338928}
+  LoseCanvas: {fileID: 715347053}
+  ScoreCanvas: {fileID: 1588785149}
+  ScoreScreenScoreText: {fileID: 1759995528}
+  ScoreScreenHighscoreText: {fileID: 1272567124}
   Colours:
   - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
   - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
@@ -195,9 +199,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
   - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
   - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
-  ScoreText: {fileID: 1708659025}
-  ScoreScreenText: {fileID: 1759995528}
-  TimeText: {fileID: 1874338928}
+  ColourText: {fileID: 1465890366}
   WordColour: {fileID: 0}
   WordText: {fileID: 0}
 --- !u!1 &34940205

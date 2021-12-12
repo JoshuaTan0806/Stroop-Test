@@ -18,34 +18,37 @@ public class GameManager : MonoBehaviour
         ScoreMenu
     }
 
+    [Header("Main Menu")]
     public Canvas MainMenuCanvas;
+
+    [Header("Options")]
     public Canvas OptionsCanvas;
-    public Canvas GameCanvas;
-    public Canvas ScoreCanvas;
-    public Canvas LoseCanvas;
-
-    public GameObject ColourManager;
-
     public TMP_Dropdown NumberOfColoursDropdown;
     public int NumberOfColours;
+    public TMP_Dropdown NumberOfGamesDropdown;
+    public int NumberOfGames;
 
+    [Header("Game")]
+    public Canvas GameCanvas;
     public int Score;
-
-    public int[,] Highscores = new int[5,4];
-
     public Button[] Buttons;
-
-    public TextMeshProUGUI ColourText;
-    public Colour[] Colours;
-
     public TextMeshProUGUI ScoreText;
-    public TextMeshProUGUI ScoreScreenText;
-
     public TextMeshProUGUI TimeText;
 
+    [Header("Lose Screen")]
+    public Canvas LoseCanvas;
+
+
+    [Header("Score Screen")]
+    public Canvas ScoreCanvas;
+    public TextMeshProUGUI ScoreScreenScoreText;
+    public TextMeshProUGUI ScoreScreenHighscoreText;
+
+    [Header("Colour")]
+    public Colour[] Colours;
+    public TextMeshProUGUI ColourText;
     public Colour WordColour;
     public Colour WordText;
-
 
     private void Awake()
     {
@@ -62,14 +65,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 5; i++)
-        {
-            for (int j = 0; j < 4; j++)
-            {
-                Highscores[i,j] = PlayerPrefs.GetInt($"Highscore{i}colours{j}games");
-            }
-        }
-
         CurrentGameState = GameState.MainMenu;
     }
 
@@ -122,6 +117,7 @@ public class GameManager : MonoBehaviour
     {
         CurrentGameState = GameState.InGame;
         NumberOfColours = NumberOfColoursDropdown.value + 4;
+        NumberOfGames = NumberOfGamesDropdown.value;
         SetActiveCanvas(OptionsCanvas, false);
         SetActiveCanvas(GameCanvas);
         Score = 0;
@@ -160,9 +156,16 @@ public class GameManager : MonoBehaviour
 
     public void LoseGame()
     {
+        if(Score > PlayerPrefs.GetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games"))
+        {
+            PlayerPrefs.SetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games", Score);
+        }
+
         CurrentGameState = GameState.ScoreMenu;
         SetActiveCanvas(GameCanvas, false);
         SetActiveCanvas(ScoreCanvas);
-        ScoreScreenText.text = Score.ToString();
+        ScoreScreenScoreText.text = Score.ToString();
+        ScoreScreenHighscoreText.text = PlayerPrefs.GetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games").ToString();
+
     }
 }
