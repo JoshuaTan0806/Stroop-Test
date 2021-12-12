@@ -41,6 +41,12 @@ public class GameManager : MonoBehaviour
     //number of games chosen in the dropdown
     [HideInInspector] public int NumberOfGames;
 
+    //the dropdown of amount of time in options canvas
+    public TMP_Dropdown AmountOfTimeDropdown;
+
+    //time between each correct click before losing game
+    [HideInInspector] public int StartTime;
+
     [Header("Game")]
 
     //game canvas 1
@@ -72,9 +78,6 @@ public class GameManager : MonoBehaviour
 
     //colour text 4 of game 4 canvas
     public ColourText Game4Text4;
-
-    //time between each correct click before losing game
-    public int StartTime;
 
     //the player's current score
     [HideInInspector] public int Score;
@@ -190,6 +193,20 @@ public class GameManager : MonoBehaviour
         //reset the score
         Score = 0;
 
+        //change the start time depending on the option chosen
+        if (AmountOfTimeDropdown.value == 0)
+        {
+            StartTime = 15;
+        }
+        else if (AmountOfTimeDropdown.value == 1)
+        {
+            StartTime = 10;
+        }
+        else
+        {
+            StartTime = 5;
+        }
+
         //set a different canvas active depending on how many games were chosen
         if (NumberOfGames == 0)
         {
@@ -218,10 +235,10 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         //if the score is larger than the current highscore of the number of colours and games
-        if(Score > PlayerPrefs.GetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games"))
+        if(Score > PlayerPrefs.GetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games{StartTime}time"))
         {
             //set the highscore to the current score
-            PlayerPrefs.SetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games", Score);
+            PlayerPrefs.SetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games{StartTime}time", Score);
         }
 
         //change menu to the score
@@ -237,6 +254,6 @@ public class GameManager : MonoBehaviour
         
         //set the score and highscore text
         ScoreScreenScoreText.text = Score.ToString();
-        ScoreScreenHighscoreText.text = PlayerPrefs.GetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games").ToString();
+        ScoreScreenHighscoreText.text = PlayerPrefs.GetInt($"Highscore{NumberOfColours - 4}colours{NumberOfGames}games{StartTime}time").ToString();
     }
 }
