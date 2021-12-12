@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public Canvas ScoreCanvas;
     public Canvas LoseCanvas;
 
+    public GameObject ColourManager;
+
     public TMP_Dropdown NumberOfColoursDropdown;
     public int NumberOfColours;
 
@@ -108,5 +110,7 @@ public class GameManager : MonoBehaviour
         NumberOfColours = NumberOfColoursDropdown.value + 4;
         SetActiveCanvas(OptionsCanvas, false);
         SetActiveCanvas(GameCanvas);
+
+        ColourManager.GetComponent<ColourButtonManager>().ResetColours(NumberOfColours);
     }
 }
