@@ -33,6 +33,20 @@ public class GameManager : MonoBehaviour
 
     public int[,] Highscores = new int[5,4];
 
+    public Button[] Buttons;
+
+    public TextMeshProUGUI ColourText;
+    public Colour[] Colours;
+
+    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI ScoreScreenText;
+
+    public TextMeshProUGUI TimeText;
+
+    public Colour WordColour;
+    public Colour WordText;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -110,7 +124,45 @@ public class GameManager : MonoBehaviour
         NumberOfColours = NumberOfColoursDropdown.value + 4;
         SetActiveCanvas(OptionsCanvas, false);
         SetActiveCanvas(GameCanvas);
+        Score = 0;
+        ScoreText.text = Score.ToString();
+        ResetColours(NumberOfColours);
+        ChangeColour();
+    }
 
-        ColourManager.GetComponent<ColourButtonManager>().ResetColours(NumberOfColours);
+    public void ResetColours(int NumberOfColours)
+    {
+        for (int i = 0; i < Buttons.Length; i++)
+        {
+            Buttons[i].gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < NumberOfColours; i++)
+        {
+            Buttons[i].gameObject.SetActive(true);
+        }
+    }
+
+    [ContextMenu("Change Colour")]
+    public void ChangeColour()
+    {
+        WordColour = Colours[Random.Range(0, NumberOfColours)];
+        WordText = Colours[Random.Range(0, NumberOfColours)];
+
+        while (WordText == WordColour)
+        {
+            WordText = Colours[Random.Range(0, NumberOfColours)];
+        }
+
+        ColourText.text = WordText.Name;
+        ColourText.color = new Color32(WordColour.R, WordColour.G, WordColour.B, 255);
+    }
+
+    public void LoseGame()
+    {
+        CurrentGameState = GameState.ScoreMenu;
+        SetActiveCanvas(GameCanvas, false);
+        SetActiveCanvas(ScoreCanvas);
+        ScoreScreenText.text = Score.ToString();
     }
 }

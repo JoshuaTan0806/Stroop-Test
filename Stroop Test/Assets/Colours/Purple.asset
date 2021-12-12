@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Purple
   m_EditorClassIdentifier: 
   Name: Purple
-  R: 230
-  G: 230
-  B: 250
+  R: 108
+  G: 3
+  B: 191
