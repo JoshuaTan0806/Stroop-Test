@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public Canvas MainMenuCanvas;
     public Canvas OptionsCanvas;
+    public Canvas GameCanvas;
     public Canvas ScoreCanvas;
     public Canvas LoseCanvas;
 
@@ -27,7 +28,8 @@ public class GameManager : MonoBehaviour
     public int NumberOfColours;
 
     public int Score;
-    public int Highscore;
+
+    public int[,] Highscores = new int[5,4];
 
     private void Awake()
     {
@@ -44,7 +46,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Highscore = PlayerPrefs.GetInt("Highscore");
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                Highscores[i,j] = PlayerPrefs.GetInt($"Highscore{i}colours{j}games");
+            }
+        }
+
         CurrentGameState = GameState.MainMenu;
     }
 
@@ -98,5 +107,6 @@ public class GameManager : MonoBehaviour
         CurrentGameState = GameState.InGame;
         NumberOfColours = NumberOfColoursDropdown.value + 4;
         SetActiveCanvas(OptionsCanvas, false);
+        SetActiveCanvas(GameCanvas);
     }
 }
