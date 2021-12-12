@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ColourButton : MonoBehaviour
 {
+    public ColourText ColourText;
     public Colour Colour;
     Button button;
 
@@ -16,11 +18,12 @@ public class ColourButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        if(Colour == GameManager.instance.WordColour)
+        if(Colour == ColourText.WordColour)
         {
-            GameManager.instance.ChangeColour();
+            ColourText.ChangeColour();
             GameManager.instance.Score++;
-            GameManager.instance.ScoreText.text = GameManager.instance.Score.ToString();
+            ColourText.ScoreText.text = GameManager.instance.Score.ToString();
+            ColourText.TimeRemaining = GameManager.instance.StartTime;
         }
         else
         {
