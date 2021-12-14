@@ -175,6 +175,15 @@ MonoBehaviour:
   NumberOfGames: 0
   AmountOfTimeDropdown: {fileID: 1915487186}
   StartTime: 5
+  Colours:
+  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
+  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
+  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
+  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
+  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
+  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
+  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
+  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   GameCanvas: {fileID: 825580286}
   Game1Text: {fileID: 1465890368}
   GameCanvas2: {fileID: 1780323018}
@@ -240,15 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94058c0f41fad9c45a2dd0e9cda03899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colours:
-  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
-  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
-  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
-  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
-  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
-  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
-  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
-  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   Buttons:
   - {fileID: 495898561}
   - {fileID: 995918762}
@@ -11775,15 +11775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94058c0f41fad9c45a2dd0e9cda03899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colours:
-  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
-  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
-  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
-  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
-  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
-  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
-  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
-  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   Buttons:
   - {fileID: 1187996992}
   - {fileID: 10232095}
@@ -13170,15 +13161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94058c0f41fad9c45a2dd0e9cda03899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colours:
-  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
-  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
-  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
-  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
-  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
-  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
-  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
-  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   Buttons:
   - {fileID: 1089999288}
   - {fileID: 1737318129}
@@ -17791,15 +17773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94058c0f41fad9c45a2dd0e9cda03899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colours:
-  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
-  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
-  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
-  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
-  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
-  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
-  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
-  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   Buttons:
   - {fileID: 1338182374}
   - {fileID: 2083158750}
@@ -18368,15 +18341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94058c0f41fad9c45a2dd0e9cda03899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colours:
-  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
-  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
-  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
-  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
-  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
-  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
-  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
-  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   Buttons:
   - {fileID: 1878120043}
   - {fileID: 1944606155}
@@ -21296,15 +21260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94058c0f41fad9c45a2dd0e9cda03899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colours:
-  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
-  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
-  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
-  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
-  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
-  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
-  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
-  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   Buttons:
   - {fileID: 617938910}
   - {fileID: 1460146249}
@@ -25757,15 +25712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94058c0f41fad9c45a2dd0e9cda03899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colours:
-  - {fileID: 11400000, guid: 84d901980a2f6984ca2992bd94540ef5, type: 2}
-  - {fileID: 11400000, guid: 4f21920ff35ae8141a27b85efffcf59f, type: 2}
-  - {fileID: 11400000, guid: 5eafb28736a0d7e4aad1820775f61289, type: 2}
-  - {fileID: 11400000, guid: d73f257ac0143034bb3a21bb6e49a3ae, type: 2}
-  - {fileID: 11400000, guid: 352e0c6ca34031442958029a54de20fe, type: 2}
-  - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
-  - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
-  - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
   Buttons:
   - {fileID: 1779488687}
   - {fileID: 717438343}

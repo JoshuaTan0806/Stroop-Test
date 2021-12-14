@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Game")]
 
+    //all colours in the same order as the buttons
+    public Colour[] Colours;
+
     //game canvas 1
     public Canvas GameCanvas;
 

@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class ColourText : MonoBehaviour
 {
-    //all colours in the same order as the buttons
-    public Colour[] Colours;
-
     //the buttons for each different colour
     public Button[] Buttons;
 
@@ -36,14 +33,14 @@ public class ColourText : MonoBehaviour
     public void ChangeColour()
     {
         //select a random colour for the colour of the displayed word
-        WordColour = Colours[Random.Range(0, GameManager.instance.NumberOfColours)];
+        WordColour = GameManager.instance.Colours[Random.Range(0, GameManager.instance.NumberOfColours)];
         //select a random colour for the text of the displayed word
-        WordText = Colours[Random.Range(0, GameManager.instance.NumberOfColours)];
+        WordText = GameManager.instance.Colours[Random.Range(0, GameManager.instance.NumberOfColours)];
 
         //ensures the colour and text isn't the same
         while (WordText == WordColour)
         {
-            WordText = Colours[Random.Range(0, GameManager.instance.NumberOfColours)];
+            WordText = GameManager.instance.Colours[Random.Range(0, GameManager.instance.NumberOfColours)];
         }
 
         //set the words text
