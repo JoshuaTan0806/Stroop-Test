@@ -53,34 +53,7 @@ public class GameManager : MonoBehaviour
     public Colour[] Colours;
 
     //game canvas 1
-    public Canvas GameCanvas;
-
-    //game canvas 1's colour text
-    public ColourText Game1Text;
-
-    //game canvas 2
-    public Canvas GameCanvas2;
-
-    //colour text 1 of game 2 canvas
-    public ColourText Game2Text;
-
-    //colour text 2 of game 2 canvas
-    public ColourText Game2Text2;
-
-    //game canvas 4
-    public Canvas GameCanvas4;
-
-    //colour text 1 of game 4 canvas
-    public ColourText Game4Text;
-
-    //colour text 2 of game 4 canvas
-    public ColourText Game4Text2;
-
-    //colour text 3 of game 4 canvas
-    public ColourText Game4Text3;
-
-    //colour text 4 of game 4 canvas
-    public ColourText Game4Text4;
+    public Canvas[] GameCanvases;
 
     //the player's current score
     [HideInInspector] public int Score;
@@ -211,25 +184,8 @@ public class GameManager : MonoBehaviour
         }
 
         //set a different canvas active depending on how many games were chosen
-        if (NumberOfGames == 0)
-        {
-            SetActiveCanvas(GameCanvas);
-            Game1Text.StartGame();
-        }
-        else if(NumberOfGames == 1)
-        {
-            SetActiveCanvas(GameCanvas2);
-            Game2Text.StartGame();
-            Game2Text2.StartGame();
-        }
-        else
-        {
-            SetActiveCanvas(GameCanvas4);
-            Game4Text.StartGame();
-            Game4Text2.StartGame();
-            Game4Text3.StartGame();
-            Game4Text4.StartGame();
-        }
+        SetActiveCanvas(GameCanvases[NumberOfGames]);
+        GameCanvases[NumberOfGames].GetComponent<SubGameManager>().StartGame();
     }
 
     /// <summary>
@@ -248,9 +204,10 @@ public class GameManager : MonoBehaviour
         CurrentGameState = GameState.ScoreMenu;
 
         //disable the current canvases
-        SetActiveCanvas(GameCanvas, false);
-        SetActiveCanvas(GameCanvas2, false);
-        SetActiveCanvas(GameCanvas4, false);
+        for (int i = 0; i < GameCanvases.Length; i++)
+        {
+            SetActiveCanvas(GameCanvases[i], false);
+        }
 
         //open the score canvas
         SetActiveCanvas(ScoreCanvas);

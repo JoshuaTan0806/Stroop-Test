@@ -184,16 +184,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e9b54e949ab340e4b894960eb81735f5, type: 2}
   - {fileID: 11400000, guid: 2f96e8330629261448a989ee414b4834, type: 2}
   - {fileID: 11400000, guid: 024a71b5c9084ae41b3dd9092c098c59, type: 2}
-  GameCanvas: {fileID: 825580286}
-  Game1Text: {fileID: 1465890368}
-  GameCanvas2: {fileID: 1780323018}
-  Game2Text: {fileID: 1025620441}
-  Game2Text2: {fileID: 1453850544}
-  GameCanvas4: {fileID: 1184929000}
-  Game4Text: {fileID: 1080725278}
-  Game4Text2: {fileID: 1733187119}
-  Game4Text3: {fileID: 3717699}
-  Game4Text4: {fileID: 2099797657}
+  GameCanvases:
+  - {fileID: 825580286}
+  - {fileID: 1780323018}
+  - {fileID: 1184929000}
   Score: 0
   LoseCanvas: {fileID: 715347053}
   ScoreCanvas: {fileID: 1588785149}
@@ -9999,6 +9993,7 @@ GameObject:
   - component: {fileID: 825580286}
   - component: {fileID: 825580285}
   - component: {fileID: 825580284}
+  - component: {fileID: 825580288}
   m_Layer: 5
   m_Name: Game Canvas
   m_TagString: Untagged
@@ -10088,6 +10083,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &825580288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825580283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcb64d13abde61409235e97c48e3d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColourTexts:
+  - {fileID: 1465890368}
 --- !u!1 &844071346
 GameObject:
   m_ObjectHideFlags: 0
@@ -14062,6 +14071,7 @@ GameObject:
   - component: {fileID: 1184929000}
   - component: {fileID: 1184928999}
   - component: {fileID: 1184928998}
+  - component: {fileID: 1184929002}
   m_Layer: 5
   m_Name: Game Canvas 4
   m_TagString: Untagged
@@ -14154,6 +14164,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1184929002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184928997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcb64d13abde61409235e97c48e3d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColourTexts:
+  - {fileID: 1080725278}
+  - {fileID: 1733187119}
+  - {fileID: 3717699}
+  - {fileID: 2099797657}
 --- !u!1 &1185431822
 GameObject:
   m_ObjectHideFlags: 0
@@ -21933,6 +21960,7 @@ GameObject:
   - component: {fileID: 1780323018}
   - component: {fileID: 1780323017}
   - component: {fileID: 1780323016}
+  - component: {fileID: 1780323020}
   m_Layer: 5
   m_Name: Game Canvas 2
   m_TagString: Untagged
@@ -22023,6 +22051,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1780323020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780323015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcb64d13abde61409235e97c48e3d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColourTexts:
+  - {fileID: 1025620441}
+  - {fileID: 1453850544}
 --- !u!1 &1788248908
 GameObject:
   m_ObjectHideFlags: 0
